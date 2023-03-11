@@ -1,0 +1,75 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+// Font size declarations
+
+// Details for header 1
+$header-1-size: 56px;
+$header-1-weight: 800;
+$header-1-font-family: "Inter", sans-serif;
+
+// Details for header 2
+$header-2-size: 48px;
+$header-2-weigtht: $header-1-weight;
+$header-2-font-family: $header-1-font-family;
+
+// Details for header 3
+$header-3-size: 42px;
+$header-3-weigtht: 700;
+$header-3-font-family: $header-1-font-family;
+
+// Details for header 4
+$header-4-size: 32px;
+$header-4-weigtht: 700;
+$header-4-font-family: $header-1-font-family;
+
+// Details for header 5
+$header-4-size: 18px;
+$header-4-weigtht: 800;
+$header-4-font-family: "Poppins", sans-serif;
+
+// Details for paragraph-bold 1
+$paragraph-bold-size: 16px;
+$paragraph-bold-weight: 700;
+$paragraph-bold-family: $header-4-font-family;
+
+// Details for paragraph-bold 2
+$paragraph-bold-2-size: 14px;
+$paragraph-bold-2-weight: 600;
+$paragraph-bold-2-family: $header-4-font-family;
+
+// Details for paragraph-text 1
+$paragraph-text-size: 16px;
+$paragraph-text-weight: 400;
+$paragraph-family: $header-4-font-family;
+
+// Details for paragraph-text 2
+$paragraph-text-2-size: 12px;
+$paragraph-text-2-weight: 400;
+$paragraph-family-2: $header-4-font-family;
+
+// Color variables
+$white: #fff;
+$faded-white: rgba(255, 255, 255, 0.42);
+$bg-btn-green: #1d9a6d;
+$bg-btn-blue: #5653ff;
+$bg-btn-dark-blue: rgba(98, 127, 227, 0.7);
+$bg-btn-dark: rgba(98, 127, 227, 0.15);
+$bg-input: rgba(255, 255, 255, 0.1);
+
+// Padding variables
+$container-paddign-left: 10%;
+$container-paddign-right: 10%;
+
+// Global Styles
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  padding-left: $container-paddign-left;
+  padding-right: $container-paddign-right;
+}
