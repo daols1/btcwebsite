@@ -1,0 +1,66 @@
+$color: #7197ff;
+$size: 20px;
+$time: 1;
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    26.43deg,
+    rgb(1, 46, 29) 36.58%,
+    rgb(2, 1, 54) 80.91%
+  );
+}
+
+.dank-ass-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .row {
+    display: flex;
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  margin: 0 (calc(-#{$size} / 2));
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: ($size * 1.8) solid $color;
+  animation: blink $time + s infinite;
+  filter: drop-shadow(0 0 ($size * 1.5) $color);
+
+  &.down {
+    transform: rotate(180deg);
+  }
+
+  @for $i from 1 through 18 {
+    &.outer-#{$i} {
+      animation-delay: -(calc($time / 18)) * $i + s;
+    }
+  }
+
+  @for $i from 1 through 6 {
+    &.inner-#{$i} {
+      animation-delay: -(calc($time / 6)) * $i + s;
+      // animation-delay: -(#{$time} / 6 * $i) + s;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}

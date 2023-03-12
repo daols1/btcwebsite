@@ -33,8 +33,8 @@ function NavBar() {
     <div className='navbar container'>
       <img src={logo} alt=""/>
         <ul className='nav-list'>
-          <li><Link> Functions </Link></li>
-          <li><Link> Wallets </Link></li>
+          <li><Link to='/'> Functions </Link></li>
+          <li><Link to='/wallets'> Wallets </Link></li>
           <li><Link> Participation </Link></li>
           <li><Link> Resources </Link></li>
           <li><Link> News </Link></li>
@@ -74,11 +74,14 @@ function NavBar() {
       <motion.div 
       className='mobile-nav-wrapper'
       whileInView={{
-        height: '50vh',
+        height: '100vh',
       }}
+      // transition={{
+      //   duration:0.2,
+      // }}
       style = {{
         display: !nav ? 'none' : 'block',
-        height: !nav ? '0vh': '50vh',
+        height: !nav ? '0vh': '100vh',
       }}
       >
         <div className='mobile-nav-list'>

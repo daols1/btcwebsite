@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Loader from './components/Loader/Loader'
 import SharedLayout from './components/SharedLayout/SharedLayout'
 import './main.scss'
 import Home from './pages/Home/Home'
@@ -8,7 +9,19 @@ import Wallets from './pages/Wallets/Wallets'
 
 function App() {
 
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 4000)
+  }, [])
+
   return (
+    <>{
+      !isLoading?
+    
     <div className="App">
       <Routes>
         <Route path='/' element={<SharedLayout />} >
@@ -17,6 +30,10 @@ function App() {
         </Route>
       </Routes>
     </div>
+    :
+    <div><Loader /></div>
+  }</>
+      
   )
 }
 

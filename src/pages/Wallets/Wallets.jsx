@@ -1,9 +1,10 @@
 import React from 'react'
+import Loader from '../../components/Loader/Loader'
 
 function Wallets() {
   return (
     <div>
-        Wallets page
+      This is the wallets Page
     </div>
   )
 }
