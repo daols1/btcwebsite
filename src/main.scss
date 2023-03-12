@@ -52,6 +52,7 @@ $paragraph-family-2: $header-4-font-family;
 // Color variables
 $white: #fff;
 $faded-white: rgba(255, 255, 255, 0.42);
+$bg-dark: #151822;
 $bg-btn-green: #1d9a6d;
 $bg-btn-blue: #5653ff;
 $bg-btn-dark-blue: rgba(98, 127, 227, 0.7);
@@ -61,15 +62,49 @@ $bg-input: rgba(255, 255, 255, 0.1);
 // Padding variables
 $container-paddign-left: 10%;
 $container-paddign-right: 10%;
+$base-vertical-padding: 0px 15px;
+
+// Margin variables
+$base-vertical-margin: 0px 15px;
+
+// Break points variables
+$lap-lg: 1440px;
+$lap: 1024px;
+$tab: 768px;
+$mob-lg: 425px;
+$mob-md: 375px;
+$mob-sm: 320px;
 
 // Global Styles
-
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
+  font-family: $header-1-font-family;
+  scroll-behavior: smooth;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.App {
+  overflow-x: hidden;
 }
 
 .container {
   padding-left: $container-paddign-left;
   padding-right: $container-paddign-right;
+}
+
+// transparent bg glass mixin
+
+@mixin glass {
+  background: rgba(255, 255, 255, 0.253);
+  backdrop-filter: blur(8.5px);
+  border: 1px $faded-white solid;
+  border-radius: 10px;
+  &:hover {
+    background: darken($faded-white, 10);
+  }
 }

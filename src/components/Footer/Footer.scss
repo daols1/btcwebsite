@@ -1,0 +1,61 @@
+@import "../../main.scss";
+
+.footer {
+  background-color: $bg-dark;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  padding: 80px 0px 10px;
+  gap: 20px;
+  width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-size: $paragraph-text-size;
+      color: $white;
+      font-weight: $paragraph-bold-2-weight;
+    }
+    li {
+      color: $faded-white;
+      font-size: $paragraph-text-2-size;
+      font-weight: $paragraph-text-2-weight;
+      list-style: none;
+      padding: 5px 2px;
+    }
+  }
+  .footer-last-side {
+    p {
+      color: $faded-white;
+      padding: 10px 0px 70px;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      * {
+        padding: 3px;
+      }
+    }
+    .footer-socials {
+      justify-self: flex-end;
+    }
+  }
+}
+
+.footnote {
+  display: flex;
+  background-color: $bg-dark;
+  color: $faded-white;
+  font-size: $paragraph-text-2-size;
+  justify-content: space-between;
+  padding: 30px 0px;
+  border-top: 1px $bg-input solid;
+}
+
+@media screen and (max-width: $tab) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+  .footnote {
+    flex-direction: column;
+  }
+}

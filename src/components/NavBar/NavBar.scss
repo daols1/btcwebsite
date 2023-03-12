@@ -1,33 +1,84 @@
 @import "../../main.scss";
 
-.navbar {
+// Nav main mixin
+
+@mixin nav {
   display: grid;
   grid-template-columns: 1fr 6fr 2fr;
   align-items: center;
   justify-items: center;
   background-image: linear-gradient(
     267.43deg,
-    rgba(0, 255, 162, 0.808) 36.58%,
-    rgba(30, 26, 255, 0.856) 80.91%
+    rgba(0, 255, 163, 0.12) 36.58%,
+    rgba(31, 26, 255, 0.2) 80.91%
   );
   backdrop-filter: blur(3);
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: $paragraph-family-2;
+}
+
+.navbar {
+  @include nav;
   img {
     justify-self: flex-start;
+    outline: 2px rgb(44, 41, 206) solid;
+    padding: 10px 13px;
+    border-radius: 100%;
   }
   .nav-list {
     display: flex;
     list-style: none;
     li {
-      padding: 0px 15px;
+      padding: $base-vertical-padding;
       color: $faded-white;
       font-size: $paragraph-bold-2-size;
     }
   }
   div {
     justify-self: flex-end;
+    .btn-glass {
+      @include glass;
+      padding: 0px 10px;
+      margin: $base-vertical-margin;
+    }
+  }
+}
+
+@media screen and (max-width: $tab) {
+  .navbar-mobile {
+    @include nav;
+    grid-template-columns: 1fr 1fr;
+    isolation: isolate !important;
+
+    img {
+      justify-self: flex-start;
+    }
+    .hamburger {
+      justify-self: flex-end;
+    }
+    .mobile-nav-wrapper {
+      background-image: linear-gradient(
+        267.43deg,
+        rgba(1, 20, 13, 0.808) 36.58%,
+        rgba(2, 1, 39, 0.856) 80.91%
+      );
+      position: absolute;
+      top: 0;
+      padding-top: 60px;
+      text-align: center;
+      display: block;
+      height: 0vh;
+      width: 100%;
+      z-index: -1;
+    }
+    .mobile-nav-list {
+      list-style: none;
+      li {
+        color: $white;
+        padding: 5px 0px;
+      }
+    }
   }
 }
