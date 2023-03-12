@@ -51,7 +51,7 @@ $paragraph-family-2: $header-4-font-family;
 
 // Color variables
 $white: #fff;
-$faded-white: rgba(255, 255, 255, 0.42);
+$faded-white: rgb(180, 180, 180);
 $bg-dark: #151822;
 $bg-btn-green: #1d9a6d;
 $bg-btn-blue: #5653ff;
@@ -82,6 +82,12 @@ $mob-sm: 320px;
   box-sizing: border-box;
   font-family: $header-1-font-family;
   scroll-behavior: smooth;
+  // &::after {
+  //   box-sizing: border-box;
+  // }
+  // &::before {
+  //   box-sizing: border-box;
+  // }
   a {
     color: inherit;
     text-decoration: none;
@@ -106,5 +112,16 @@ $mob-sm: 320px;
   border-radius: 10px;
   &:hover {
     background: darken($faded-white, 10);
+  }
+}
+
+// Animations
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

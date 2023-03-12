@@ -17,7 +17,6 @@ function NavBar() {
   // Logic to check screen size
   
   const screenChcker = window.innerWidth >= 770 
-  console.log(screenChcker)
 
   // const style = {
   //   display: 
