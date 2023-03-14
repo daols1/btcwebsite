@@ -21,6 +21,7 @@
   top: 0px;
   left: 0px;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar {
@@ -36,7 +37,7 @@
     list-style: none;
     li {
       padding: $base-vertical-padding;
-      color: $faded-white;
+      color: $white;
       font-size: $paragraph-bold-2-size;
     }
   }

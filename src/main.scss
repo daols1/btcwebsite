@@ -103,6 +103,25 @@ $mob-sm: 320px;
   padding-right: $container-paddign-right;
 }
 
+.btn {
+  padding: 10px 20px;
+  color: $white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(75, 72, 241, 0.19);
+}
+
+.bg-green {
+  background-color: $bg-btn-green;
+}
+
+.bg-dark {
+  background-color: $bg-btn-dark;
+}
+
+.bg-blue {
+  background-color: $bg-btn-blue;
+}
+
 // transparent bg glass mixin
 
 @mixin glass {

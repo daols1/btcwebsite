@@ -40,10 +40,12 @@
   img {
     justify-self: flex-end;
     position: relative;
+    z-index: 2 !important;
   }
   div {
     h1 {
       font-size: $header-1-size;
+      font-family: $header-1-font-family;
       background-image: linear-gradient(45deg, #ffffff, #afafaf);
       background-size: 100%;
       background-clip: text;
@@ -71,6 +73,9 @@
     div {
       h1 {
         font-size: 35px;
+      }
+      p {
+        font-size: 14px;
       }
     }
   }

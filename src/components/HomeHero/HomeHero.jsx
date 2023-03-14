@@ -7,8 +7,8 @@ function HomeHero() {
   return (
     <div className='container homehero'>
         <div>
-            <h1>Become Your Own Bank Today</h1>
-            <p>Get freedom with private, global digital money. Become your own bank with full control over your digital assets.</p>
+            <h1>Become Your Own Bank Today With Bitsons</h1>
+            <p>Get freedom with private, global digital money. Become your own bank with full control over your digital assets. You get to know and keep what you have by yourself. Monitoring your assets on your phone is so nice</p>
         </div>
         <motion.img 
         src={btcImg} 
