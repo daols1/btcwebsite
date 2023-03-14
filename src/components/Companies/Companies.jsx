@@ -5,7 +5,8 @@ import yahoo from '../../assets/home/partners/yahoo.png'
 import yandex from '../../assets/home/partners/yandex.png'
 import xwc from '../../assets/home/partners/xwc.png'
 import ods from '../../assets/home/partners/ods.png'
-import vector from '../../assets/home/partners/vector.png'
+import nas from '../../assets/home/partners/nas.png'
+import ambdev from '../../assets/home/partners/ambdev.png'
 import group from '../../assets/home/partners/group.png'
 import wecar from '../../assets/home/partners/wecar.png'
 
@@ -22,9 +23,9 @@ function Companies() {
             <img src={yandex} />
             <img src={wecar} />
             <img src={ods} />
-            <img src={vector} />
+            <img src={nas} />
             <img src={group} />
-            <img src='' />
+            <img src={ambdev} />
             <img src={xwc} />
         </div>
     </div>
