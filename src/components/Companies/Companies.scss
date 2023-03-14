@@ -1,0 +1,53 @@
+@import "../../main.scss";
+
+.companies {
+  background: $bg-main-dark;
+  color: $white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  gap: 20px;
+  position: relative;
+  &::after {
+    content: "ПАРТНЕРЫ";
+    color: darken($faded-white, 60);
+    position: absolute;
+    top: 60px;
+    font-size: $header-1-size * 2.5;
+    z-index: 0;
+  }
+  div {
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+    h2 {
+      font-size: $header-2-size;
+      margin-bottom: 20px;
+    }
+  }
+  .comp-img-side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 75%;
+    img {
+      background-color: $bg-dark;
+      padding: 25px;
+      border-radius: 100%;
+      width: 100%;
+      &:nth-child(even) {
+        padding: 40px 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tab) {
+  .companies {
+    grid-template-columns: 1fr;
+    &::after {
+      font-size: $header-1-size * 1.5;
+    }
+  }
+}

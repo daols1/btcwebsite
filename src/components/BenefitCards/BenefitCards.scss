@@ -2,7 +2,7 @@
 
 .main-cards {
   //   background: radial-gradient(180deg, #080f1f, rgba(13, 25, 27, 0.671));
-  background: linear-gradient(to top, #060911, #0d1425 70%, #091124);
+  background: linear-gradient(to top, #060911, #0d1425 70%, #0a1630);
 }
 
 .card-divs {
@@ -11,14 +11,15 @@
   gap: 30px;
   place-content: center;
   place-items: center;
-  padding: 100px 0px;
+  padding: $section-padding 0px;
   z-index: -1;
   .card {
     max-width: 260px;
+    max-height: 490px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-image: linear-gradient(to bottom, $bg-dark, #0f1828);
+    background-image: linear-gradient(to bottom, $bg-dark, #131823);
     color: $white;
     padding: 40px 20px;
     border-radius: 20px;
@@ -35,7 +36,7 @@
       min-height: 190px;
       transform: scale(0.8);
       margin-right: -46px;
-      margin-bottom: -58px;
+      margin-bottom: -62px;
       margin-top: -30px;
       border-bottom-right-radius: 20px;
       z-index: 0;

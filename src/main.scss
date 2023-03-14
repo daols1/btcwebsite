@@ -58,11 +58,13 @@ $bg-btn-blue: #5653ff;
 $bg-btn-dark-blue: rgba(98, 127, 227, 0.7);
 $bg-btn-dark: rgba(98, 127, 227, 0.15);
 $bg-input: rgba(255, 255, 255, 0.1);
+$bg-main-dark: #060911;
 
 // Padding variables
 $container-paddign-left: 10%;
 $container-paddign-right: 10%;
 $base-vertical-padding: 0px 15px;
+$section-padding: 100px;
 
 // Margin variables
 $base-vertical-margin: 0px 15px;
@@ -142,5 +144,14 @@ $mob-sm: 320px;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideaway {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(900px);
   }
 }
