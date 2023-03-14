@@ -59,6 +59,7 @@ $bg-btn-dark-blue: rgba(98, 127, 227, 0.7);
 $bg-btn-dark: rgba(98, 127, 227, 0.15);
 $bg-input: rgba(255, 255, 255, 0.1);
 $bg-main-dark: #060911;
+$bg-txt-color: #b4b3b338;
 
 // Padding variables
 $container-paddign-left: 10%;
@@ -101,8 +102,8 @@ $mob-sm: 320px;
 }
 
 .container {
-  padding-left: $container-paddign-left;
-  padding-right: $container-paddign-right;
+  padding-left: $container-paddign-left !important;
+  padding-right: $container-paddign-right !important;
 }
 
 .btn {

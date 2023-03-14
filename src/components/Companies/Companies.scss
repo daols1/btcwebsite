@@ -11,11 +11,12 @@
   position: relative;
   &::after {
     content: "PARTNERS";
-    color: darken($faded-white, 60);
+    color: $bg-txt-color;
     position: absolute;
     top: 60px;
     font-size: $header-1-size * 2.5;
     z-index: 0;
+    font-weight: $paragraph-bold-2-weight;
   }
   div {
     z-index: 1;

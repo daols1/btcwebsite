@@ -1,0 +1,102 @@
+@import "../../main.scss";
+
+.ready {
+  background: $bg-main-dark;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 50px;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  position: relative;
+  h1 {
+    z-index: 1;
+  }
+  &::before {
+    content: "Ready?";
+    color: $bg-txt-color;
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    font-size: $header-1-size * 2.5;
+    font-weight: $paragraph-bold-2-weight;
+    z-index: 0;
+  }
+  .instruct-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    div {
+      background-color: $bg-dark;
+      padding: 40px;
+      border-radius: 20px;
+      min-width: 220px;
+      min-height: 220px;
+      &:nth-child(3) {
+        position: relative;
+        img {
+          position: absolute;
+          scale: 0.7;
+          bottom: -1.6em;
+          right: -1.6em;
+          z-index: 0;
+        }
+      }
+      &:nth-child(2) {
+        position: relative;
+        img {
+          position: absolute;
+          scale: 0.7;
+          bottom: -1.3em;
+          right: 2em;
+          z-index: 0;
+        }
+      }
+      &:nth-child(1) {
+        position: relative;
+        img {
+          position: absolute;
+          scale: 0.7;
+          bottom: -1.4em;
+          right: -1em;
+          z-index: 0;
+        }
+      }
+      h3 {
+        padding: 20px 0px;
+      }
+    }
+  }
+  form {
+    background: url("../../assets/home/bgmain.png") center center;
+    background-size: cover;
+    padding: 40px;
+    border-radius: 20px;
+    * {
+      padding-bottom: 20px;
+    }
+    input {
+      background-color: $bg-input;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      // min-width: 280px;
+      padding: 10px;
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: $tab) {
+  .ready {
+    &::before {
+      font-size: $header-1-size * 1.5;
+    }
+    .instruct-card {
+      grid-template-columns: 1fr;
+    }
+  }
+}
