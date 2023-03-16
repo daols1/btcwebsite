@@ -11,12 +11,7 @@
   position: relative;
   &::after {
     content: "PARTNERS";
-    color: $bg-txt-color;
-    position: absolute;
-    top: 60px;
-    font-size: $header-1-size * 2.5;
-    z-index: 0;
-    font-weight: $paragraph-bold-2-weight;
+    @include before-txt;
   }
   div {
     z-index: 1;
@@ -47,8 +42,5 @@
 @media screen and (max-width: $tab) {
   .companies {
     grid-template-columns: 1fr;
-    &::after {
-      font-size: $header-1-size * 1.5;
-    }
   }
 }

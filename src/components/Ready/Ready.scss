@@ -16,13 +16,9 @@
   }
   &::before {
     content: "Ready?";
-    color: $bg-txt-color;
-    position: absolute;
     top: -20px;
     right: 30px;
-    font-size: $header-1-size * 2.5;
-    font-weight: $paragraph-bold-2-weight;
-    z-index: 0;
+    @include before-txt;
   }
   .instruct-card {
     display: grid;
@@ -92,9 +88,6 @@
 
 @media screen and (max-width: $tab) {
   .ready {
-    &::before {
-      font-size: $header-1-size * 1.5;
-    }
     .instruct-card {
       grid-template-columns: 1fr;
     }

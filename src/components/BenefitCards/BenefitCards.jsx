@@ -8,12 +8,6 @@ import c3 from '../../assets/home/c3.png'
 function BenefitCards() {
   return (
     <div className='container main-cards'>
-        {/* Create a card data file containing all the deatils. */}
-        {/* Map through the data and produce cards. */}
-        {/* For it to be scrollable  */}
-        {/* Make the maximum that can be on the screeen to be three with either css styling and or if statement */}
-        {/* By default all the card components would be blurred  */}
-        {/* On view of the component in question it would be unblured */}
         <div className='card-divs'>
           <div className='card card-1'>
             <p>Help secure the network</p>

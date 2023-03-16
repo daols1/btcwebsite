@@ -85,12 +85,12 @@ function NavBar() {
       }}
       >
         <div className='mobile-nav-list'>
-          <li><Link> Functions </Link></li>
-          <li><Link> Wallets </Link></li>
-          <li><Link> Participation </Link></li>
-          <li><Link> Resources </Link></li>
-          <li><Link> News </Link></li>
-          <li><Link> About BTCA </Link></li>
+          <li><Link to='/' onClick={() => showNav(!nav)}> Functions </Link></li>
+          <li><Link to='/wallets' onClick={() => showNav(!nav)}> Wallets </Link></li>
+          <li><Link to='/' onClick={() => showNav(!nav)}> Participation </Link></li>
+          <li><Link to='/' onClick={() => showNav(!nav)}> Resources </Link></li>
+          <li><Link to='/' onClick={() => showNav(!nav)}> News </Link></li>
+          <li><Link to='/' onClick={() => showNav(!nav)}> About BTCA </Link></li>
         </div>
       </motion.div>
     </div>
