@@ -8,7 +8,7 @@ import c3 from '../../assets/home/c3.png'
 function BenefitCards() {
   return (
     <div className='container main-cards'>
-        <div className='card-divs'>
+        <div className='card-divs grid-3'>
           <div className='card card-1'>
             <p>Help secure the network</p>
             <h3>And get rewarded</h3>

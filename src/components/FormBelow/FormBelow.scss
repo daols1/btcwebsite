@@ -1,0 +1,20 @@
+@import "../../main.scss";
+
+form {
+  background: url("../../assets/home/bgmain.png") center center;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 20px;
+  * {
+    padding-bottom: 20px;
+  }
+  input {
+    background-color: $bg-input;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    // min-width: 280px;
+    padding: 10px;
+    color: $white;
+  }
+}

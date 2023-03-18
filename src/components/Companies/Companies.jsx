@@ -12,7 +12,7 @@ import wecar from '../../assets/home/partners/wecar.png'
 
 function Companies() {
   return (
-    <div className='container companies'>
+    <div className='container companies grid-2'>
         <div className='comp-txt-side'>
             <h2>We are supported</h2>
             <p>Get freedom with private, global digital money. Become your own bank with full control over your digital assets.</p>

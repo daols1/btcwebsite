@@ -1,8 +1,6 @@
 @import "../../main.scss";
 
 .showapp {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   background: linear-gradient(181.62deg, #010430 1.37%, rgb(13, 25, 27) 67.84%);
@@ -50,9 +48,6 @@
 }
 
 @media screen and (max-width: $tab) {
-  .showapp {
-    grid-template-columns: 1fr;
-  }
   .laptop-side {
     .phone {
       scale: 0.4 !important;

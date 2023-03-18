@@ -8,7 +8,7 @@ import './ShowApp.scss'
 
 function ShowApp() {
   return (
-    <div className='container showapp'>
+    <div className='container showapp grid-2'>
         <div className='txt-side'>
             <h2>Wallet and Tools</h2>
             <p>By leveraging cutting-edge blockchain technology and a robust set of features, the BTCA platform offers a comprehensive suite of tools and resources that empower you to take charge of your financial future and stay in complete control of your funds at all times, whether you're a seasoned cryptocurrency trader or just getting started in the exciting world of digital assets.</p>

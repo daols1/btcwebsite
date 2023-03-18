@@ -20,8 +20,6 @@
 }
 
 .stacking-rewards-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 40px;
   color: $white;
   div {
@@ -81,7 +79,4 @@
 }
 
 @media screen and (max-width: $tab) {
-  .stacking-rewards-inner {
-    grid-template-columns: 1fr;
-  }
 }

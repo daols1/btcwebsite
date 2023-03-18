@@ -131,12 +131,24 @@ $mob-sm: 320px;
   background-color: $bg-btn-blue;
 }
 
+// Utility clases
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 // transparent bg glass mixin
 
 @mixin glass {
-  background: rgba(255, 255, 255, 0.057);
+  background: rgba(255, 255, 255, 0.027);
   backdrop-filter: blur(5px);
-  border: 1px $faded-white solid;
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px #f4f4f449 solid;
   border-radius: 10px;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   // &:hover {
@@ -181,5 +193,9 @@ $mob-sm: 320px;
 @media screen and (max-width: $tab) {
   p {
     font-size: $paragraph-bold-2-size;
+  }
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
   }
 }

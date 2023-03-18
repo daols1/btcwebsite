@@ -5,7 +5,7 @@ import './StackingReward.scss'
 function StackingReward() {
   return (
     <div className='container stacking-rewards'>
-        <div className='stacking-rewards-inner'>
+        <div className='stacking-rewards-inner grid-2'>
             <div>
                 <h1>Stacking Rewards</h1>
                 <p>Estimate your rewards and see how simple it is to receive staking rewards with BTCA</p>

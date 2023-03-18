@@ -3,8 +3,6 @@
 .companies {
   background: $bg-main-dark;
   color: $white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   gap: 20px;
@@ -40,7 +38,4 @@
 }
 
 @media screen and (max-width: $tab) {
-  .companies {
-    grid-template-columns: 1fr;
-  }
 }

@@ -1,0 +1,43 @@
+@import "../../main.scss";
+
+.wallet-doc {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background: $bg-main-dark;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  h1 {
+    text-align: center;
+  }
+  > p {
+    text-align: center;
+  }
+  .grid-3 {
+    gap: 30px;
+    div {
+      @include glass;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-height: 200px;
+      * {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+  .faq {
+    gap: 20px;
+    div {
+      display: grid;
+      img {
+        width: 80%;
+        justify-self: center;
+      }
+    }
+  }
+}

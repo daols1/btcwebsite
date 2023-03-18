@@ -6,8 +6,6 @@
 }
 
 .card-divs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   place-content: center;
   place-items: center;
@@ -45,7 +43,4 @@
 }
 
 @media screen and (max-width: $tab) {
-  .card-divs {
-    grid-template-columns: 1fr;
-  }
 }
