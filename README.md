@@ -1,6 +1,6 @@
 <!-- # btcwebsite -->
 
-### ReactJS and Strapi Ecommerce and Blog Project
+# ReactJS and Strapi Ecommerce and Blog Project
 
 This project is an ecommerce and blog website built using ReactJS and Strapi. It provides a platform for selling products online as well as a blog for sharing articles related to the products and industry.
 
@@ -30,4 +30,4 @@ Contributions to the project are welcome. Please fork the repository and submit 
 
 ## Acknowledgements
 
-This project was built using ReactJS and Strapi by David Ladipo Adeyanju a reactjs Front-end Webdeveloper
+This project was built using ReactJS and Strapi by **David Ladipo Adeyanju** a reactjs Front-end Webdeveloper
