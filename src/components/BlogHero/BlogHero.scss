@@ -1,0 +1,107 @@
+@import "../../main.scss";
+
+.blog-hero {
+  background: url("../../assets//home/bgmain.png");
+  background-position: center center;
+  background-size: cover;
+  color: $white;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .glased {
+    @include glass;
+    gap: 20px;
+    padding: 40px;
+    h1 {
+      font-size: $header-1-size;
+    }
+    div {
+      text-align: right;
+      &:nth-child(1) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .blog-rrs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    div {
+      // background-color: red;
+      // padding: 20px;
+      div {
+        // background: green;
+        border-radius: 20px;
+        div {
+          background: linear-gradient(
+            to top right,
+            rgb(80, 80, 207),
+            rgb(9, 0, 87)
+          );
+          background-size: cover;
+          background-position: center center;
+          padding: 20px;
+          margin-bottom: 20px;
+          position: relative;
+          min-height: 360px;
+          display: grid;
+          place-content: center;
+          position: relative;
+          &::before {
+            position: absolute;
+            background: linear-gradient(
+              to bottom right,
+              rgba(13, 26, 206, 0.705),
+              rgba(1, 0, 39, 0.651)
+            );
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            z-index: 0;
+          }
+          * {
+            z-index: 1;
+          }
+        }
+        hr {
+          margin: 20px 0px;
+        }
+        h3 {
+          margin: 10px 0px;
+        }
+      }
+    }
+    .blog-small-side {
+      div {
+        margin-bottom: 20px;
+        div {
+          min-height: 210px;
+          margin-bottom: 10px;
+          h1 {
+            font-size: $header-4-size;
+          }
+        }
+        hr {
+          margin: 5px 0px;
+        }
+        p {
+          font-size: 12px;
+          margin: 5px 0px;
+        }
+        h3 {
+          font-size: 12px;
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tab) {
+  .blog-rrs {
+    grid-template-columns: 1fr !important;
+  }
+}

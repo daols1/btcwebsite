@@ -4,6 +4,7 @@ import './App.css'
 import Loader from './components/Loader/Loader'
 import SharedLayout from './components/SharedLayout/SharedLayout'
 import './main.scss'
+import Blog from './pages/Blog/Blog'
 import Home from './pages/Home/Home'
 import Wallets from './pages/Wallets/Wallets'
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/' element={<SharedLayout />} >
           <Route index element= {<Home />} />
           <Route path='/wallets' element= {<Wallets />} />
+          <Route path='/blog' element= {<Blog />} />
         </Route>
       </Routes>
     </div>

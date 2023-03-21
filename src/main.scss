@@ -145,15 +145,18 @@ $mob-sm: 320px;
 // transparent bg glass mixin
 
 @mixin glass {
-  background: rgba(255, 255, 255, 0.027);
+  background: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px #f4f4f449 solid;
+  border: 1px #f4f4f41a solid;
   border-radius: 10px;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   // &:hover {
   //   transform: scale(1.03);
   // }
+}
+
+@mixin blog-card {
 }
 
 @mixin before-txt {
