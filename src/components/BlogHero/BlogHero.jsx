@@ -24,6 +24,7 @@ function BlogHero() {
   }
 
   if (isError) {
+    console.log(error.message)
     return <span>Error: {error.message}</span>
   }
 
@@ -46,10 +47,10 @@ function BlogHero() {
         <div>
           <div>
             <div style={{
-              background: `url(${data.data[0].attributes.imgLink})`
+              background: `url(${data?.data[0].attributes.imgLink})`
             }}>
               {/* <h1>BTCA v5.3.0 Wallet Release and Network Upgrade Announcement</h1> */}
-              <h1>{data.data[0].attributes.Title}</h1>
+              <h1>{data?.data[0].attributes.Title}</h1>
             </div>
             <p>PUBLISHED AUG 28, 2021</p>
             <hr />
