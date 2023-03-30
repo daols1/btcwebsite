@@ -9,6 +9,7 @@ import Loader from '../Loader/Loader'
 
 function BlogDetail() {
 
+//   Fetch logic for major post
   const {blogId} = useParams()
   const [data, setdata] = useState({})
   const [isLoading, setIsLoading ] = useState(true)
@@ -29,8 +30,10 @@ function BlogDetail() {
 
   return (
     <div className='container blog-detail'>
-        <h1>{ data.attributes.Title }</h1>
-        <div>{ data.attributes.Content  }</div>
+        <div>
+            <h1>{ data.attributes.Title }</h1>
+            <p>{ data.attributes.Content  }</p>
+        </div>
     </div>
   )
 }
