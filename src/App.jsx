@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import BlogDetail from './components/BlogDetail/BlogDetail'
 import Loader from './components/Loader/Loader'
 import SharedLayout from './components/SharedLayout/SharedLayout'
 import './main.scss'
@@ -29,6 +30,7 @@ function App() {
           <Route index element= {<Home />} />
           <Route path='/wallets' element= {<Wallets />} />
           <Route path='/blog' element= {<Blog />} />
+          <Route path='/blog/:blogId' element= {<BlogDetail />} />
         </Route>
       </Routes>
     </div>

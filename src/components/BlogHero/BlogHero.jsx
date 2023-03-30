@@ -15,7 +15,7 @@ function BlogHero() {
 
   const {data, isLoading, isError} = useQuery({
     queryKey: ['rrs-query'],
-    queryFn: fetcher,
+    queryFn: fetcher, 
     retry:3,
   })
 
@@ -80,5 +80,6 @@ function BlogHero() {
     </div>
   )
 }
+
 
 export default BlogHero
