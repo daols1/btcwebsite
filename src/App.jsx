@@ -7,6 +7,7 @@ import SharedLayout from './components/SharedLayout/SharedLayout'
 import './main.scss'
 import Blog from './pages/Blog/Blog'
 import Home from './pages/Home/Home'
+import Shop from './pages/Shop/Shop'
 import Wallets from './pages/Wallets/Wallets'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path='/wallets' element= {<Wallets />} />
           <Route path='/blog' element= {<Blog />} />
           <Route path='/blog/:blogId' element= {<BlogDetail />} />
+          <Route path='/shop' element= {<Shop />} />
         </Route>
       </Routes>
     </div>

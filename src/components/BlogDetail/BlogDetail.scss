@@ -19,9 +19,22 @@
   div {
     position: relative;
     z-index: 2;
+    img{
+      width: 100%;
+      height: 100%;
+    }
     h1 {
       padding-top: 20px;
       padding-bottom: 20px;
+    }
+    h2{
+      padding: $section-padding 0px;
+    }
+    .similar-cards{
+      padding: 10px;
+      border: 1px $white solid;
+      margin: 15px 0px;
+      border-radius: 5px;
     }
   }
 }

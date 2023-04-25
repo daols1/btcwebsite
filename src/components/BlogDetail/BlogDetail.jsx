@@ -9,9 +9,17 @@ import Loader from '../Loader/Loader'
 
 function BlogDetail() {
 
+  // Fetch for smilarities
+  
+  const {data} = useQuery({
+    queryKey: ['blog-cards'],
+    queryFn: fetcher,
+    retry:3,
+  })
+  
 //   Fetch logic for major post
   const {blogId} = useParams()
-  const [data, setdata] = useState({})
+  const [datas, setdatas] = useState({})
   const [isLoading, setIsLoading ] = useState(true)
 
   useEffect(() => {
@@ -19,7 +27,7 @@ function BlogDetail() {
     fetch(`http://localhost:1337/api/blogs/${blogId}`)
       .then(res => res.json())
       .then(data => {
-        setdata(data.data)
+        setdatas(data.data)
         setIsLoading(false)
       })
   },[])
@@ -28,11 +36,24 @@ function BlogDetail() {
     return <Loader />
   }
 
+
   return (
     <div className='container blog-detail'>
         <div>
-            <h1>{ data.attributes.Title }</h1>
-            <p>{ data.attributes.Content  }</p>
+            <img src={datas.attributes.imgLink} alt="" />
+            <h1>{ datas.attributes.Title }</h1>
+            <p>{ datas.attributes.Content  }</p>
+            <h2>Check out some similar Posts</h2>
+            {
+              data.data.map(post => {
+                return (
+                  <div key={post.id} className='similar-cards'>
+                    <h3>{ post.attributes.Title.substr(0, 20) + '...' }</h3>
+                    <p>{ post.attributes.Content.substr(0, 100) + '...' }</p>
+                  </div>
+                )
+              })
+            }
         </div>
     </div>
   )

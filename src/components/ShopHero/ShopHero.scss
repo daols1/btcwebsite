@@ -1,0 +1,12 @@
+@import "../../main.scss";
+
+.shop-hero {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background: url("../../assets/home/bgmain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  gap: 20px;
+  align-items: center;
+}

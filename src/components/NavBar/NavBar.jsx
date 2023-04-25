@@ -36,13 +36,13 @@ function NavBar() {
           <li><Link to='/'> Functions </Link></li>
           <li><Link to='/wallets'> Wallets </Link></li>
           <li><Link to='/blog'> Blog </Link></li>
-          <li><Link> Resources </Link></li>
+          <li><Link to='/shop'> Shop </Link></li>
           <li><Link> News </Link></li>
           <li><Link> About BTCA </Link></li>
         </ul>
       <div>
-        <Link className='btn-glass'>RUS</Link>
-        <Link className='btn-glass'>⭕10.864</Link>
+        <Link className='btn-glass'>Login</Link>
+        <Link className='btn-glass'>Sign up</Link>
       </div>
     </div>
     :
@@ -88,7 +88,7 @@ function NavBar() {
           <li><Link to='/' onClick={() => showNav(!nav)}> Functions </Link></li>
           <li><Link to='/wallets' onClick={() => showNav(!nav)}> Wallets </Link></li>
           <li><Link to='/blog' onClick={() => showNav(!nav)}> Blog </Link></li>
-          <li><Link to='/' onClick={() => showNav(!nav)}> Resources </Link></li>
+          <li><Link to='/shop' onClick={() => showNav(!nav)}> Shop </Link></li>
           <li><Link to='/' onClick={() => showNav(!nav)}> News </Link></li>
           <li><Link to='/' onClick={() => showNav(!nav)}> About BTCA </Link></li>
         </div>
