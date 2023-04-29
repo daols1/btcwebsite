@@ -46,7 +46,8 @@
     .btn-glass {
       @include glass;
       padding: 0px 10px;
-      margin: $base-vertical-margin;
+      margin-right: 10px;
+      display: inline-block;
     }
   }
 }

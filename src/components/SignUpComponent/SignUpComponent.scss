@@ -1,0 +1,60 @@
+@import "../../main.scss";
+
+
+.sign-up{
+    height: 100vh;
+    color: $white;
+    gap: 20px;
+    justify-items: justify;
+    align-items: center;
+    background-color: $bg-main-dark;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    .form-side{
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 30px;
+            margin-top: 20px;
+            label{
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            button{
+                margin: 20px 0px;
+                justify-self: flex-start;
+            }
+            .signupwithg{
+                padding-top: 10px;
+                padding-bottom: 0px;
+                hr{
+                    padding: 0px;
+                    width: 100%;
+                    margin: 2px 0px;
+                    justify-self: center;
+                }
+                p{
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 5px;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+    .img-side{
+        justify-self: center;
+    }
+}
+
+
+@media screen and (max-width: $tab) {
+  .sign-up{
+    height: 150vh;
+  }
+  .img-side{
+    img{
+        width: 90%;
+    }
+  }
+}

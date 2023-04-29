@@ -9,6 +9,8 @@ import Blog from './pages/Blog/Blog'
 import Home from './pages/Home/Home'
 import Shop from './pages/Shop/Shop'
 import Wallets from './pages/Wallets/Wallets'
+import SingnUp from './pages/SingnUp/SingnUp'
+import Login from './pages/Login/Login'
 
 function App() {
 
@@ -20,6 +22,10 @@ function App() {
       setIsLoading(false)
     }, 4000)
   }, [])
+
+  // Logout function
+
+  
 
   return (
     <>{
@@ -33,6 +39,8 @@ function App() {
           <Route path='/blog' element= {<Blog />} />
           <Route path='/blog/:blogId' element= {<BlogDetail />} />
           <Route path='/shop' element= {<Shop />} />
+          <Route path='/signup' element= {<SingnUp />} />
+          <Route path='/login' element= {<Login/>} />
         </Route>
       </Routes>
     </div>

@@ -41,8 +41,8 @@ function NavBar() {
           <li><Link> About BTCA </Link></li>
         </ul>
       <div>
-        <Link className='btn-glass'>Login</Link>
-        <Link className='btn-glass'>Sign up</Link>
+        <Link to='/login' className='btn-glass'>Login</Link>
+        <Link to='/signup' className='btn-glass'>Sign up</Link>
       </div>
     </div>
     :
@@ -91,6 +91,8 @@ function NavBar() {
           <li><Link to='/shop' onClick={() => showNav(!nav)}> Shop </Link></li>
           <li><Link to='/' onClick={() => showNav(!nav)}> News </Link></li>
           <li><Link to='/' onClick={() => showNav(!nav)}> About BTCA </Link></li>
+          <li><Link to='/login' onClick={() => showNav(!nav)} className='btn-glass'>Login</Link></li>
+          <li><Link to='/signup' onClick={() => showNav(!nav)} className='btn-glass'>Sign up</Link></li>
         </div>
       </motion.div>
     </div>
