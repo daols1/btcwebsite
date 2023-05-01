@@ -4,7 +4,9 @@ import './LoginComponent.scss'
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
 import { app, provider } from '../../utils/firebase'
-import {createUserWithEmailAndPassword, 
+import {
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
     getAuth,
     signInWithPopup,
     GoogleAuthProvider,
