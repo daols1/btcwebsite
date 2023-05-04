@@ -43,7 +43,8 @@ function LoginComponent() {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log("You have succefully Logged in")
+                // console.log("You have succefully Logged in")
+                console.log(auth.currentUser)
                 toaster('Successfully Logged in 😀 ')
                 // ...
             })

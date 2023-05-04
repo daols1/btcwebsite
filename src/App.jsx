@@ -11,6 +11,7 @@ import Shop from './pages/Shop/Shop'
 import Wallets from './pages/Wallets/Wallets'
 import SingnUp from './pages/SingnUp/SingnUp'
 import Login from './pages/Login/Login'
+import Profile from './pages/Profile/Profile'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path='/shop' element= {<Shop />} />
           <Route path='/signup' element= {<SingnUp />} />
           <Route path='/login' element= {<Login/>} />
+          <Route path='/profile' element= {<Profile/>} />
         </Route>
       </Routes>
     </div>

@@ -8,6 +8,7 @@ import {
     getAuth,
     signInWithPopup,
     GoogleAuthProvider,
+    updateProfile
 } from 'firebase/auth'
 import btcImg from '../../assets/home/btcimg.png'
 import { FcGoogle } from "react-icons/fc";
@@ -35,7 +36,7 @@ function SignUpComponent() {
         // Define fields
         const email = data.email
         const passowrd = data.password
-        // const userName = data.userName
+        let userName = data.userName
         
 
         // Create userwith email and password
@@ -43,6 +44,14 @@ function SignUpComponent() {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                // Update profile user name
+                updateProfile(auth.currentUser, {
+                    displayName: userName
+                }).then(() => {
+                    console.log("You have succefully updated your profile")
+                }).catch(() => {
+                    console.log("You have failed to update your profile")
+                })
                 // console.log("You have succefully signed in")
                 toaster('You have successfully signed in 😀')
                 // ...

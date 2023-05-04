@@ -26,19 +26,19 @@ function NavBar() {
     if (user) {
       // User is signed in
       const uid = user.uid;
-      console.log(uid)
+      // console.log(uid)
       setChecker(true)
-      console.log(checker)
+      // console.log(checker)
       // ...
     } else {
       // User is signed out
-      console.log("You are not signed")
+      // console.log("You are not signed")
       setChecker(false)
-      console.log(checker)
+      // console.log(checker)
       // ...
     }
   });
-  console.log(checker)
+  // console.log(checker)
 
   // Logout
   const logoutHandler = () => {
@@ -101,6 +101,9 @@ function NavBar() {
           </Link>
           {
             checker === false && <Link to='/signup' className='btn-glass'>Sign up</Link>
+          }
+          {
+            checker === true && <Link to='/profile' className='btn-glass'>Profile</Link>
           }
       </div>
     </div>
