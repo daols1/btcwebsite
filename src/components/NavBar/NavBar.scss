@@ -56,7 +56,7 @@
   .navbar-mobile {
     @include nav;
     grid-template-columns: 1fr 1fr;
-    isolation: isolate !important;
+    // isolation: isolate !important;
     backdrop-filter: blur(4px);
     img {
       justify-self: flex-start;

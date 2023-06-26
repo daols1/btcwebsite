@@ -28,7 +28,7 @@ const initialState = {
         state.value = {
             isLoggedIn: false,
             loading: false,
-            displayName: null,
+            displayName:"John Doe" ,
         }
       },
     },
