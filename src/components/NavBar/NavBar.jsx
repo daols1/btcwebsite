@@ -20,42 +20,12 @@ function NavBar() {
     setNav(!nav)
   }
 
-  const dispatch = useDispatch()
-
+  
   // Logic to check screen size
   const screenChcker = window.innerWidth >= 770 
-
-  // is LoggedIn
-
-
-  // let checker = false
   const logged = useSelector((state) => state.auth.value.displayName)
-  // if (logged.length() !== 0) {
-  //   check
-  // }
-
-
-  // Logic to check if 
-  // Logged 
+  const dispatch = useDispatch()
   const auth = getAuth(app)
-  // const [checker, setChecker] = useState(true)
-  // onAuthStateChanged(auth, (user) => {
-  //   if (user) {
-  //     // User is signed in
-  //     const uid = user.uid;
-  //     // console.log(uid)
-  //     setChecker(true)
-  //     // console.log(checker)
-  //     // ...
-  //   } else {
-  //     // User is signed out
-  //     // console.log("You are not signed")
-  //     setChecker(false)
-  //     // console.log(checker)
-  //     // ...
-  //   }
-  // });
-  // console.log(checker)
 
   // Logout
   const logoutHandler = () => {
@@ -81,11 +51,11 @@ function NavBar() {
         })
   }
 
-  // Logout combiner function
-  // const logoutCombine = () => {
-  //   logged !== "John Doe" ? logoutHandler() : null
-  //   // screenChcker ? setNav(!nav) : null
-  // }
+  // Logout combiner function for desktop screen
+  const logoutCombine = () => {
+    logged !== "John Doe" ? logoutHandler() : null
+    // screenChcker ? setNav(!nav) : null
+  }
 
 
   return (
@@ -109,8 +79,8 @@ function NavBar() {
       <div>
         <Link 
           to='/login' 
-          onClick={
-            logoutCombine
+          onClick={ () =>
+            logoutCombine()
           }
           className='btn-glass'>
           {
@@ -145,14 +115,14 @@ function NavBar() {
       onClick={() => navHandler()}/>
       </div>
       }
-      <div 
+      <motion.div 
       className='mobile-nav-wrapper'
-      // whileInView={{
-      //   height: '100vh',
-      // }}
-      // transition={{
-      //   duration:0.2,
-      // }}
+      whileInView={{
+        height: '100vh',
+      }}
+      transition={{
+        duration:0.2,
+      }}
       style = {{
         display: !nav ? 'none' : 'block' ,
         height: !nav ? '0vh': '100vh',
@@ -188,7 +158,7 @@ function NavBar() {
           }
           </li>
         </div>
-      </div>
+      </motion.div>
     </div>
     }
   </>
