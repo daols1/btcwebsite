@@ -1,0 +1,48 @@
+@import "../../main.scss";
+
+.upload-form{
+    background-color: $bg-main-dark;
+    // padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    color: $white;
+    h1{
+        padding-bottom: 20px ;
+    }
+    div{
+        gap: 20px;
+        align-items: center;
+        .upload-form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input, textarea {
+            background-color: $bg-input;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            // min-width: 280px;
+            padding: 10px;
+            color: $white;
+        }
+        div{
+            img{
+            width: 30rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $tab) {
+    .upload-form{
+        div{
+            div{
+                img{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+  }
+  

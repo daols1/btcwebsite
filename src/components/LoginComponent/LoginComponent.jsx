@@ -1,6 +1,5 @@
 import React from 'react'
 import './LoginComponent.scss'
-// 
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
 import { app, provider } from '../../utils/firebase'

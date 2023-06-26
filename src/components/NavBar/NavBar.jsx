@@ -112,7 +112,7 @@ function NavBar() {
     <div className='navbar-mobile container'>
       <img src={logo} alt=""/>
       {
-        !nav ?
+        !nav === true ?
           <motion.div 
       className='hamburger'
       whileTap={{
@@ -120,7 +120,7 @@ function NavBar() {
       }}
       ><CgMenuRightAlt 
       size={30} color='#fff' 
-      onClick={navHandler}/>
+      onClick={() => navHandler()}/>
       </motion.div>
       :
       <motion.div 
@@ -130,7 +130,7 @@ function NavBar() {
       }}
       ><CgClose
       size={30} color='#fff' 
-      onClick={navHandler}/>
+      onClick={() => navHandler()}/>
       </motion.div>
       }
       <motion.div 
