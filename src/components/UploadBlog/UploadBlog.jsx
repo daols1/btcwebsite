@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './UploadBlog.scss'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
@@ -32,7 +32,7 @@ function UploadBlog() {
         },
     })
 
-    const {register, formState, handleSubmit} = useForm({
+    const {register, formState, handleSubmit, reset} = useForm({
         defaultValues:{
             title: "",
             body:"",
@@ -58,9 +58,7 @@ function UploadBlog() {
         )
     }
     
-    const submitHandler = async (data, event) => {
-        // setForm(data)
-        console.log(data)
+    const submitHandler = async (data) => {
         await mutation.mutate({
                 "data":
                     {
@@ -69,16 +67,24 @@ function UploadBlog() {
                         "fileLink": image,
                     }
                 })
-        if (mutation.isLoading) { return toaster("Posting... hold on!"); }
-        if (mutation.isError) { return toaster(`Error: ${mutation.error.message}`); }
-        if (mutation.isSuccess) { return toaster("Successfully Posted! 😀"); }
-        event.preventDefault();
+        reset({
+            title: "",
+            body: "",
+            fileLink: "",
+        })
     }
 
+    if (mutation.isLoading) {
+        toaster("Posting... hold on!")
+    }
+    if (mutation.isSuccess) {
+        toaster("Successfully Posted! 😀")
+    }
+    if (mutation.isError) {
+        toaster("Something went wrong retry")
+    }
     
-
-    
-    
+      
     
 
   return (
