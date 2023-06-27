@@ -12,31 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Content": {
+    "body": {
       "type": "richtext"
     },
-    "pic": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "isLiked": {
-      "type": "boolean"
-    },
-    "imgLink": {
-      "type": "string",
-      "required": true
+    "fileLink": {
+      "type": "text"
     }
   }
 }

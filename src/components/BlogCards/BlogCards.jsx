@@ -28,15 +28,15 @@ function BlogCards() {
   return (
     <div className='container blog-cards'>
       <div className='gapped grid-3'>
-        { 
+        {isLoading ? <Loader /> :
           data.data.map((item) => {
             return(
               <div key={item.id} className='blog-card'>
-                <h3>{item.attributes.Title.substr(0, 60) + '...'}</h3>
-                <p>Published on {item.attributes.createdAt.substr(0, 10)}</p>
+                <h3>{item.attributes.title?.substring(0, 60) + '...'}</h3>
+                <p>Published on {item.attributes.createdAt?.substring(0, 10)}</p>
                 <hr />
                 <div>
-                  {item.attributes.Content.substr(0, 100) + '...'}
+                  {item.attributes.body?.substring(0, 100) + '...'}
                 </div>
                 <Link to={`/blog/${item.id}`}>
                   <button>Read More</button>

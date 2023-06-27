@@ -40,16 +40,16 @@ function BlogDetail() {
   return (
     <div className='container blog-detail'>
         <div>
-            <img src={datas.attributes.imgLink} alt="" />
-            <h1>{ datas.attributes.Title }</h1>
-            <p>{ datas.attributes.Content  }</p>
+            <img src={datas.attributes.file} alt="" />
+            <h1>{ datas.attributes.title }</h1>
+            <p>{ datas.attributes.body  }</p>
             <h2>Check out some similar Posts</h2>
             {
               data.data.map(post => {
                 return (
                   <div key={post.id} className='similar-cards'>
-                    <h3>{ post.attributes.Title.substr(0, 20) + '...' }</h3>
-                    <p>{ post.attributes.Content.substr(0, 100) + '...' }</p>
+                    <h3>{ post.attributes.title.substr(0, 20) + '...' }</h3>
+                    <p>{ post.attributes.body.substr(0, 100) + '...' }</p>
                   </div>
                 )
               })
