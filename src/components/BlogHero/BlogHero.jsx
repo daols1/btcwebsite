@@ -47,7 +47,7 @@ function BlogHero() {
         <div>
           <div>
             <div style={{
-              background: `url(${data?.data[0].attributes.imgLink})`
+              // background: `url(${data?.data[0].attributes.imgLink})`
             }}>
               {/* <h1>BTCA v5.3.0 Wallet Release and Network Upgrade Announcement</h1> */}
               <h1>{data?.data[0].attributes.Title}</h1>
