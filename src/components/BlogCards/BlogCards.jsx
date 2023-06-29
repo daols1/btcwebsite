@@ -1,29 +1,39 @@
 import React from 'react'
 import './BlogCards.scss'
+import { useSelector, useDispatch } from 'react-redux'
 import {useQuery} from '@tanstack/react-query'
 import { fetcher } from '../../utils/fetcher'
 import Loader from '../Loader/Loader'
 import FormBelow from '../FormBelow/FormBelow'
 import { Link } from 'react-router-dom'
+import {AiTwotoneHeart, AiOutlineHeart} from 'react-icons/ai'
+import LikeBtn from './LikeBtn'
+
+
 
 function BlogCards() {
+
+  
 
   const {data, isLoading, isError} = useQuery({
     queryKey: ['blog-cards'],
     queryFn: fetcher,
     retry:3,
   })
-
+    
   if (isLoading) {
     return <div>Loading...</div>
   }
 
   if (isError) {
-    console.log(error.message)
-    return <span>Error: {error.message}</span>
+    console.log(isError.message)
+    return <span>Error: {isError.message}</span>
   }
 
   console.log(data.data)
+
+
+
 
   return (
     <div className='container blog-cards'>
@@ -38,9 +48,12 @@ function BlogCards() {
                 <div>
                   {item.attributes.body?.substring(0, 100) + '...'}
                 </div>
-                <Link to={`/blog/${item.id}`}>
-                  <button>Read More</button>
-                </Link>
+                <div className='buttons'>
+                  <Link to={`/blog/${item.id}`}>
+                    <button>Read More</button>
+                  </Link>
+                  <LikeBtn />
+                </div>
               </div>
             )
           })

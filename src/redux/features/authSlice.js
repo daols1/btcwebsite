@@ -1,5 +1,3 @@
-// import { getAuth, onAuthStateChanged } from "firebase/auth";
-// import { app } from './utils/firebase.js'
 import { createSlice } from "@reduxjs/toolkit";
 
 

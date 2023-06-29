@@ -9,6 +9,7 @@ import { logIn, logOut } from '../../redux/features/authSlice';
 import {  onAuthStateChanged, getAuth, signOut } from "firebase/auth";
 import { app } from '../../utils/firebase'
 import { ToastContainer, toast } from 'react-toastify';
+import { AiTwotoneHeart } from 'react-icons/ai'
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -19,6 +20,9 @@ function NavBar() {
   const navHandler = () => {
     setNav(!nav)
   }
+
+  // Likes Selector
+  const likes = useSelector((state) => state?.like.value.likeCount)
 
   
   // Logic to check screen size
@@ -92,6 +96,9 @@ function NavBar() {
           }
           {
             logged !== "John Doe" && <Link to='/profile' className='btn-glass'>Profile</Link>
+          }
+          {
+            logged !== "John Doe" && <button className='likes'><AiTwotoneHeart color='#fff' size={25} /> <span className='like-count'>{likes}</span> </button>
           }
       </div>
     </div>

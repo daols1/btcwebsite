@@ -25,6 +25,19 @@
     hr {
       margin: 10px 0px;
     }
+    .buttons{
+      display: grid;
+      grid-template-columns: 9fr 2fr;
+      gap: 10px;
+      align-items: center;
+      button{
+        &:hover{
+          transition: all ease-in-out;
+          transition-duration: 0.2s;
+          transform: scale(1.05);
+        }
+      }
+    }
     button {
       background-color: #0c111c;
       border: none;

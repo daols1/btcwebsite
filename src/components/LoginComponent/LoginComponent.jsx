@@ -13,10 +13,17 @@ import {
 import btcImg from '../../assets/home/btcimg.png'
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from 'react-toastify';
+// import { useSelector, useDispatch } from 'react-redux'
+// import { logIn, logOut } from '../../redux/features/authSlice';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function LoginComponent() {
+
+    // State Logic
+
+    // const logged = useSelector((state) => state.auth.value.displayName)
+    // const dispatch = useDispatch()
 
     // Firebase auth
 
@@ -45,6 +52,7 @@ function LoginComponent() {
                 // console.log("You have succefully Logged in")
                 console.log(auth.currentUser)
                 toaster('Successfully Logged in 😀 ')
+                // dispatch(login())
                 // ...
             })
             .catch((error) => {
