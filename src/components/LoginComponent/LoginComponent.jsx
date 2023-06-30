@@ -13,14 +13,15 @@ import {
 import btcImg from '../../assets/home/btcimg.png'
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from 'react-toastify';
-// import { useSelector, useDispatch } from 'react-redux'
-// import { logIn, logOut } from '../../redux/features/authSlice';
+import { useSelector, useDispatch } from 'react-redux'
+import { logIn, logOut } from '../../redux/features/authSlice';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function LoginComponent() {
 
     // State Logic
+    const dispatch = useDispatch()
 
     // const logged = useSelector((state) => state.auth.value.displayName)
     // const dispatch = useDispatch()
@@ -51,8 +52,9 @@ function LoginComponent() {
                 const user = userCredential.user;
                 // console.log("You have succefully Logged in")
                 console.log(auth.currentUser)
+                // const user = auth.currentUser;
+                dispatch(logIn(user.displayName))
                 toaster('Successfully Logged in 😀 ')
-                // dispatch(login())
                 // ...
             })
             .catch((error) => {
@@ -90,6 +92,7 @@ function LoginComponent() {
           // The signed-in user info.
           const user = result.user;
           // IdP data available using getAdditionalUserInfo(result)
+          dispatch(logIn(user.displayName))
           toaster('You have successfully signed in 😀')
           // ...
         }).catch((error) => {

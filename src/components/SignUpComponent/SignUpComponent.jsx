@@ -13,11 +13,16 @@ import {
 import btcImg from '../../assets/home/btcimg.png'
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from 'react-toastify';
+import { useSelector, useDispatch } from 'react-redux'
+import { logIn, logOut } from '../../redux/features/authSlice';
 import 'react-toastify/dist/ReactToastify.css';
 
 // import 
 
 function SignUpComponent() {
+
+    // State
+    const dispatch = useDispatch()
 
     // Firebase auth
 
@@ -53,6 +58,7 @@ function SignUpComponent() {
                     console.log("You have failed to update your profile")
                 })
                 // console.log("You have succefully signed in")
+                dispatch(logIn(user.displayName))
                 toaster('You have successfully signed in 😀')
                 // ...
             })
@@ -92,6 +98,7 @@ function SignUpComponent() {
           // The signed-in user info.
           const user = result.user;
           // IdP data available using getAdditionalUserInfo(result)
+          dispatch(logIn(user.displayName))
           toaster('You have successfully signed in 😀')
           // ...
         }).catch((error) => {
